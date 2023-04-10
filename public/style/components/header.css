@@ -1,0 +1,78 @@
+header{
+    padding:20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.head-title h1{
+    width: 283px;
+    font-family: 'Roboto';
+    font-size: 50px;
+    line-height: 59px;
+    color: #00A2DC;
+    font-family: "Roboto regular";
+}
+
+.head-title a{
+    text-decoration: none;
+}
+
+
+.head-search{
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    padding: 3px;
+    width: 30%;
+}
+
+.head-search input{
+    padding: 5px 7px;
+    background-color: transparent;
+    background: #FFFFFF;
+    border: 1px solid #E7E7E7;
+    outline: none;
+    width: 321px;
+    height: 29px;
+    left: 557px;
+    top: 40px;
+    border-radius: 4px 0 0 4px;
+}
+
+.head-search button{
+    border: none;
+    background-color: #00A2DC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 40px;
+    color: #FFF;
+    border-radius: 0 4px 4px 0;
+    transition: .5s;
+    cursor: pointer;
+}
+
+
+
+.head-buttons button{
+    background-color: #00A2DC;
+    color: #fff;
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+
+.head-search button:hover{
+    cursor: pointer;
+}
+
+.head-buttons button a{
+    text-decoration: none;
+    color: #fff;
+}

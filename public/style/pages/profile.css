@@ -1,0 +1,78 @@
+.head-avatar img{
+    width: 70%;
+}
+
+.my-blog{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+.my-blog h1{
+    text-align: left;
+    font-size: 36px;
+    font-family: "Roboto regular";
+    line-height: 46px;
+    font-weight: bold;
+}
+
+.my-blog a{
+    width: 115px;
+    height: 45px;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    border: 1px solid #00A2DC;
+    background-color: #00A2DC;
+    color: #fff;
+    font-family: "Roboto regular";
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.myblog-img img{
+    width: 100%;
+}
+
+.cards{
+    padding: 50px 30px;
+    background-color: #fff;
+    width: calc(30% - 30px);
+}
+
+.cards img{
+    width: 70%;
+    margin: 0 40px;
+}
+
+.cards h2{
+    font-family: "Roboto regular";
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 46px;
+    text-align: center;
+    margin-top: 2%;
+}
+
+.cards p{
+    font-family: "Roboto regular";
+    text-align: center;
+    margin: 25px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.cards a{
+    width: 115px;
+    height: 45px;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    border: 1px solid #00A2DC;
+    background-color: #00A2DC;
+    color: #fff;
+    font-family: "Roboto regular";
+    font-size: 14px;
+    border-radius: 4px;
+}
