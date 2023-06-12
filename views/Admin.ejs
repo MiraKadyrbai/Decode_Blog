@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head.ejs')%>
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/180c2b9734.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="head-title">
+            <a href="/"><h1>Decode Blog</h1></a>
+        </div>
+        <div class="head-search">
+            <input type="text" placeholder="Поиск по блогам">
+            <button>
+                <img src="/img/icons/Vector.png" alt="">
+                Найти
+            </button>
+        </div>
+        <div class="head-avatar">
+            <img src="/img/avatar.png" alt="">
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="main">
+           <div class="main-item prof-main">
+               <div class="profile-main-item user-list">
+                    <h1>Пользователи</h1>
+                    <ul>
+                        <% alluser.forEach(user => { %>
+                           <%if(!user.isAdmin){%>
+                              <li>
+                                <%=user.full_name%>
+                                <div class="menu">
+                                    <div class="menu-item"> <a href="/editUsers/<%=user._id%>" class="edit">Заблокировать</a></div>
+                                    <div class="menu-item"><button onclick="deleteItem('<%=user._id%>')" class="delete">Удалить</button></div>
+                                </div>
+                              </li>
+                            <%}%>
+                        <%})%>
+                    </ul>
+               </div>
+           </div> 
+        </div>
+        <div class="cards">
+            <img src="/img/avatar.png" alt="">
+            <h2><span><%=user.full_name%></span></h2>
+
+            <%
+                if(loginUser.id == user.id){
+            %>
+            <a href="" class="edit-btn">Редактировать</a>
+            <a href="/api/signout">Выход</a>
+            <%
+                }
+            %>
+        </div>
+    </div>
+    <script src="/js/delete.js"></script>
+</body>
+</html>

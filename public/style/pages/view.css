@@ -1,0 +1,18 @@
+.login-register{
+    width: 95%;
+    padding: 12px;
+    background-color: #FFF3CD;
+    margin-top: 15px;
+}
+
+.login-register p{
+    color: #856404;
+    font-size: 16px;
+    line-height: 46px;
+    font-weight: 500;
+}
+
+.login-register a{
+    color: #00A2DC;
+    text-decoration: none;
+}

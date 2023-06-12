@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head.ejs')%>
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/180c2b9734.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="head-title">
+            <a href="/"><h1>Decode Blog</h1></a>
+        </div>
+        <div class="head-search">
+            <input type="text" placeholder="Поиск по блогам">
+            <button>
+                <img src="/img/icons/Vector.png" alt="">
+                Найти
+            </button>
+        </div>
+        <div class="head-avatar">
+            <img src="/img/avatar.png" alt="">
+        </div>
+    </header>
+        <div class="container">
+            <div class="main-blog">
+                <form action="" class="form form2">
+                    <h3>Новый блог</h3>
+                    <fieldset class="fieldset">
+                        <input type="text" placeholder="Введите заголовок блога" name="titleBlog">
+                    </fieldset>
+                    <fieldset class="fieldset">
+                        <select name="country" class="cat-blog" id="">
+                            <option value="">Выберите категорию</option>
+                            <option value="">Прогнозы в IT</option>
+                            <option value="">Веб-разработка</option>
+                            <option value="">Мобильная разработка</option>
+                            <option value="">Фриланс</option>
+                            <option value="">Алгоритмы</option>
+                            <option value="">Тестирование IT систем</option>
+                            <option value="">Разработка игр</option>
+                            <option value="">Дизайн и юзабилити</option>
+                            <option value="">Искуственный интелект</option>
+                            <option value="">Машинное обучение</option>
+                        </select>
+                    </fieldset>
+                    <fieldset class="fieldset">
+                        <input type="file"  name="blogImg">
+                    </fieldset>
+                    <textarea class="message" class="form-control" id="message" name="message" rows="7" placeholder="Введите описание блога" required="required" data-error="Please, leave us a message." style="height: 152px;"></textarea>
+                    <fieldset class="fieldset-btn"><button type="submit">Создать</button></fieldset>
+                </form>
+            </div>
+        </div>
+</body>
+</html>

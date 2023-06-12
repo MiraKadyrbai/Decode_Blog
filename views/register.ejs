@@ -7,7 +7,7 @@
 <body>
     <%- include('partials/header.ejs')%>
     <div class="container">
-            <form action="" class="form">
+            <form action="/api/signup" method="POST" class="form">
                 <h3>Регистрация</h3>
                 <fieldset class="fieldset">
                     <input type="email" placeholder="Введите почту" name="email">
@@ -19,7 +19,7 @@
                     <input type="password" placeholder="Введите пароль" name="password">
                 </fieldset>
                 <fieldset class="fieldset">
-                    <input type="password" placeholder="Подтвердите пароль" name="re-password">
+                    <input type="password" placeholder="Подтвердите пароль" name="re_password">
                 </fieldset>
                 <fieldset class="fieldset"><button type="submit">Зарегистрироваться</button></fieldset>
             </form>

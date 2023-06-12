@@ -1,0 +1,93 @@
+.first-2 p{
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "Roboto regular";
+    font-weight: 400;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+
+.first-2 h4{
+    font-size: 28px;
+    line-height: 24px;
+    font-family: "Roboto regular";
+    margin: 23px 0;
+    /* margin-bottom: 30px; */
+    font-weight: 500;
+}
+
+.comment-item{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.comment-item img{
+    width: 5%;
+    margin-right: 20px;
+}
+
+.comments h4{
+    font-size: 23px;
+    line-height: 24px;
+    font-family: "Roboto regular";
+    margin: 23px 0;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.comments-2 h4{
+    font-size: 23px;
+    line-height: 24px;
+    font-family: "Roboto regular";
+    margin: 23px 0;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.comments  h5{
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "Roboto regular";
+    margin: 23px 0;
+    font-weight: 500;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.comments-2 h5{
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "Roboto regular";
+    margin: 23px 0;
+    font-weight: 500;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.comments p{
+    margin-bottom: 20px;
+}
+
+.comments-2 p{
+    margin-bottom: 20px;
+}
+
+.fieldset-btn2 button{
+    width: 15%;
+    padding: 15px 25px;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    background: #00A2DC;
+    margin-top: 20px;
+}
+
+.comments{
+    border-bottom: 1px solid #E7E7E7;
+}
+

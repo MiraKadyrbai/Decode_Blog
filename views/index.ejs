@@ -76,36 +76,11 @@
             <div class="category-title">
                 <h3>Категории</h3>
             </div>
-            <div class="category-item">
-                <a href="">Прогнозы в IT</a>
-            </div>
-            <div class="category-item">
-                <a href="">Веб-разработка</a>
-            </div>
-            <div class="category-item">
-                <a href="">Мобильная разработка</a>
-            </div>
-            <div class="category-item">
-                <a href="">Фриланс</a>
-            </div>
-            <div class="category-item">
-                <a href="">Алгоритмы</a>
-            </div>
-            <div class="category-item">
-                <a href="">Тестирование IT систем</a>
-            </div>
-            <div class="category-item">
-                <a href="">Разработка игр</a>
-            </div>
-            <div class="category-item">
-                <a href="">Дизайн и юзабилити</a>
-            </div>
-            <div class="category-item">
-                <a href="">Искуственный интелект</a>
-            </div>
-            <div class="category-item">
-                <a href="">Машинное обучение</a>
-            </div>
+            <% genres.forEach(genre => { %>
+                <div class="category-item">
+                   <a href="/<%=genre.key%>"><%=genre.name%></a>
+                </div>
+            <% }) %>
         </div>
     </div>
 </body>

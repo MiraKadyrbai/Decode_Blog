@@ -1,0 +1,57 @@
+
+.main-blog{
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.main-blog h3{
+    font-size: 40px;
+}
+
+.form2{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 80px 60px;
+    align-items: flex-start;
+}
+
+.cat-blog{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 20px;
+    outline: none;
+    border: 1px solid rgba(31,31,31,.1);
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+.main-blog input{
+    color: #000;
+}
+
+.message{
+    border: 1px solid rgba(31,31,31,.1);
+    border-radius: 4px;
+    outline: none;
+    font-size: 15px;
+    padding: 10px 20px;
+    margin: 18px 0;
+    transition: all 0.4s;
+    font-family: "Roboto regular";
+    width: 27%;
+}
+
+.fieldset-btn button{
+    width: 50%;
+    padding: 15px 25px;
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    background: #00A2DC;
+}

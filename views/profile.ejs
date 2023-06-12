@@ -25,74 +25,149 @@
         <div class="main">
             <div class="my-blog">
                 <h1>Мои блоги</h1>
-                <a href="">Новый блог</a>
+                <a href="/new">Новый блог</a>
             </div>
-            <div class="first">
-                <img class="main-img" src="/img/mainlist.png" alt="">
-                <h4>Обзор Report Manager от Webix</h4>
-                <p>Осень 2020 года стала плодотворным временем для специалистов Webix.</p>
-                <p>Команда Webix выпустила восьмую версию библиотеки пользовательского интерфейса Webix с двумя новыми комплексными виджетами. Первый - зто Scheduler, о котором мы подробно говорили ранее. Второй виджет - это Gantt chart в JavaScript. Подробную информацию об этом виджете Вы можете найти в статье. </p>
-                <p>Ноябрь продолжает тенденцию, и мы спешим поделиться с Вами новым комплексным виджетом Report Manager. Давайте рассмотрим его.</p>
+    
+            <% posts.forEach(item => { %>
+            <div class="post">
+              <img src="<%=item.image %>" alt="" />
+              <div class="post-title">
+                <h2><%=item.title %></h2>
+                <div class="dropdownSettings">
+                  <div class="settings">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                    <p>Еще</p>
+                  </div>
+                  <div class="settingsOption">
+                    <button>
+                      <a href="/edit/<%=item._id %>">Edit</a>
+                    </button>
+                    <button>
+                      <a
+                        href="#"
+                        onclick="deletePost('<%=item._id%>', '<%=item.author._id%>')"
+                        >Delete</a
+                      >
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="post-text">
+                <p><%=item.description %></p>
+              </div>
+    
+              <div class="post-review">
+                <div class="data">
+                  <i class="fa-regular fa-calendar"></i>
+                  <p>24.05.2023</p>
+                </div>
+    
+                <div class="views">
+                  <i class="fa-solid fa-eye"></i>
+                  <p>21</p>
+                </div>
+    
+                <div class="comments">
+                  <i class="fa-solid fa-message"></i>
+                  <p>4</p>
+                </div>
+    
+                <div class="category">
+                  <i class="fa-solid fa-list"></i>
+                  <p><%=item.category.name %></p>
+                </div>
+    
+                <div class="author">
+                  <i class="fa-solid fa-user"></i>
+                  <p><%=item.author.full_name %></p>
+                </div>
+              </div>
             </div>
-            <div class="icons">
-                <div class="icons-item">
-                    <i class="fa-regular fa-calendar" style="color: #73767d;"></i>
-                    <p>26.06.2020</p>
+    
+            <% }) %>
+          </div>
+         <!-- <div class="container">
+            <div class="main">
+                <div class="my-blog">
+                    <h1>Мои блоги</h1>
+                    <a href="/new">Новый блог</a>
                 </div>
-                <div class="icons-item">
-                    <i class="fa-solid fa-eye" style="color: #73767d;"></i>
-                    <p>21</p>
+                <div class="first">
+                    <img class="main-img" src="/img/mainlist.png" alt="">
+                    <a href="/blog"><h4>Обзор Report Manager от Webix</h4></a>
+                    <p>Осень 2020 года стала плодотворным временем для специалистов Webix.</p>
+                    <p>Команда Webix выпустила восьмую версию библиотеки пользовательского интерфейса Webix с двумя новыми комплексными виджетами. Первый - зто Scheduler, о котором мы подробно говорили ранее. Второй виджет - это Gantt chart в JavaScript. Подробную информацию об этом виджете Вы можете найти в статье. </p>
+                    <p>Ноябрь продолжает тенденцию, и мы спешим поделиться с Вами новым комплексным виджетом Report Manager. Давайте рассмотрим его.</p>
                 </div>
-                <div class="icons-item">
-                    <i class="fa-solid fa-comment" style="color: #73767d;"></i>
-                    <p>4</p>
+                <div class="icons">
+                    <div class="icons-item">
+                        <i class="fa-regular fa-calendar" style="color: #73767d;"></i>
+                        <p>26.06.2020</p>
+                    </div>
+                    <div class="icons-item">
+                        <i class="fa-solid fa-eye" style="color: #73767d;"></i>
+                        <p>21</p>
+                    </div>
+                    <div class="icons-item">
+                        <i class="fa-solid fa-comment" style="color: #73767d;"></i>
+                        <p>4</p>
+                    </div>
+                    <div class="icons-item">
+                        <i class="fa-solid fa-comments" style="color: #73767d;"></i>
+                        <p>Веб-разработка</p>
+                    </div>
+                    <div class="icons-item">
+                        <i class="fa-solid fa-user" style="color: #73767d;"></i>
+                        <p>Nast1289</p>
+                    </div>
                 </div>
-                <div class="icons-item">
-                    <i class="fa-solid fa-comments" style="color: #73767d;"></i>
-                    <p>Веб-разработка</p>
+                <div class="first">
+                    <img class="main-img" src="/img/image2.png" alt="">
+                    <h4>Разработчики изобрели методологию <br> высокоскоростного программирования</h4>
+                    <p>Осень 2020 года стала плодотворным временем для специалистов Webix.</p>
+                    <p>Команда Webix выпустила восьмую версию библиотеки пользовательского интерфейса Webix с двумя новыми комплексными виджетами. Первый - зто Scheduler, о котором мы подробно говорили ранее. Второй виджет - это Gantt chart в JavaScript. Подробную информацию об этом виджете Вы можете найти в статье. </p>
+                    <p>Ноябрь продолжает тенденцию, и мы спешим поделиться с Вами новым комплексным виджетом Report Manager. Давайте рассмотрим его.</p>
                 </div>
-                <div class="icons-item">
-                    <i class="fa-solid fa-user" style="color: #73767d;"></i>
-                    <p>Nast1289</p>
+                <div class="icons">
+                    <div class="icons-item">
+                        <i class="fa-regular fa-calendar" style="color: #73767d;"></i>
+                        <p>26.06.2020</p>
+                    </div>
+                    <div class="icons-item">
+                        <i class="fa-solid fa-eye" style="color: #73767d;"></i>
+                        <p>21</p>
+                    </div>
+                    <div class="icons-item">
+                        <i class="fa-solid fa-comment" style="color: #73767d;"></i>
+                        <p>4</p>
+                    </div>
+                    <div class="icons-item">
+                        <i class="fa-solid fa-comments" style="color: #73767d;"></i>
+                        <p>Веб-разработка</p>
+                    </div>
+                    <div class="icons-item">
+                        <i class="fa-solid fa-user" style="color: #73767d;"></i>
+                        <p>Nast1289</p>
+                    </div>
                 </div>
+            </div> -->
+            <div class="cards">
+                <img src="/img/avatar.png" alt="">
+                <h2><span><%=user.full_name%></span></h2>
+                <p>В основном пишу про веб - разработку, на React & Redux</p>
+                <p>285 постов за все время</p>
+    
+                <%
+                    if(loginUser.id == user.id){
+                %>
+                <a href="" class="edit-btn">Редактировать</a>
+                <a href="/api/signout">Выход</a>
+                <%
+                    }
+                %>
             </div>
-            <div class="first">
-                <img class="main-img" src="/img/image2.png" alt="">
-                <h4>Разработчики изобрели методологию <br> высокоскоростного программирования</h4>
-                <p>Осень 2020 года стала плодотворным временем для специалистов Webix.</p>
-                <p>Команда Webix выпустила восьмую версию библиотеки пользовательского интерфейса Webix с двумя новыми комплексными виджетами. Первый - зто Scheduler, о котором мы подробно говорили ранее. Второй виджет - это Gantt chart в JavaScript. Подробную информацию об этом виджете Вы можете найти в статье. </p>
-                <p>Ноябрь продолжает тенденцию, и мы спешим поделиться с Вами новым комплексным виджетом Report Manager. Давайте рассмотрим его.</p>
-            </div>
-            <div class="icons">
-                <div class="icons-item">
-                    <i class="fa-regular fa-calendar" style="color: #73767d;"></i>
-                    <p>26.06.2020</p>
-                </div>
-                <div class="icons-item">
-                    <i class="fa-solid fa-eye" style="color: #73767d;"></i>
-                    <p>21</p>
-                </div>
-                <div class="icons-item">
-                    <i class="fa-solid fa-comment" style="color: #73767d;"></i>
-                    <p>4</p>
-                </div>
-                <div class="icons-item">
-                    <i class="fa-solid fa-comments" style="color: #73767d;"></i>
-                    <p>Веб-разработка</p>
-                </div>
-                <div class="icons-item">
-                    <i class="fa-solid fa-user" style="color: #73767d;"></i>
-                    <p>Nast1289</p>
-                </div>
-            </div>
-        </div>
-        <div class="cards">
-            <img src="/img/avatar.png" alt="">
-            <h2>Елнур Сеитжанов</h2>
-            <p>В основном пишу про веб - разработку, на React & Redux</p>
-            <p>285 постов за все время</p>
-            <a href="">Редактировать</a>
         </div>
     </div>
+    <script src="js/burger-menu.js"></script>
 </body>
 </html>

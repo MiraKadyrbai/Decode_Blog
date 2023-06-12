@@ -17,6 +17,11 @@
     font-weight: bold;
 }
 
+.first a{
+    text-decoration: none;
+    color: #000;
+}
+
 .my-blog a{
     width: 115px;
     height: 45px;
@@ -39,6 +44,9 @@
     padding: 50px 30px;
     background-color: #fff;
     width: calc(30% - 30px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .cards img{
@@ -58,14 +66,13 @@
 .cards p{
     font-family: "Roboto regular";
     text-align: center;
-    margin: 25px;
+    margin: 15px;
     font-size: 16px;
     line-height: 24px;
 }
 
 .cards a{
-    width: 115px;
-    height: 45px;
+    width: 40%;
     text-align: center;
     padding: 15px;
     text-decoration: none;
@@ -76,3 +83,137 @@
     font-size: 14px;
     border-radius: 4px;
 }
+
+#burger-menu{
+    position: absolute;
+    top: 100%;
+    background-color: #fff;
+    left: -10px;
+    right: 0;
+    padding: 10px 10px 20px;
+    box-shadow: 0 5px 5px 0 rgb(0 0 0 / 75%);
+    border-radius: 5px;
+    z-index: 10;
+    transform: translateY(5%);
+    display: none;
+}
+
+.menu-item{
+    padding: 13px 0;
+}
+
+.menu-item:last-child{
+    border-bottom: none;
+}
+
+.menu-item p{
+    color: #000;
+}
+
+#burger-menu::before{
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #fff;
+    display: block;
+    top: -5px;
+    bottom: auto;
+    position: absolute;
+    left: 30px;
+}
+
+.open-menu{
+    display: block !important;
+}
+
+.edit-btn{
+    margin-bottom: 15px;
+}
+
+/* .myBlog-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .main a {
+    padding: 10px 20px;
+    border: none;
+    background: #00a2dc;
+    border-radius: 4px;
+    color: #fff;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    cursor: pointer;
+  }
+  
+  .post-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .post-edit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  
+  .post-edit i {
+    color: rgba(0, 0, 0, 0.54);
+  }
+  
+  nav img {
+    margin-bottom: 11px;
+  }
+  
+  nav .name {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 46px;
+    color: #000000;
+    text-align: center;
+  }
+  
+  nav p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+  
+    color: #000000;
+    margin-bottom: 20px;
+  }
+  
+  .edit-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  nav .edit-button a {
+    padding: 10px 20px;
+    border: none;
+    background: #00a2dc;
+    border-radius: 4px;
+    color: #fff;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  
+ */
